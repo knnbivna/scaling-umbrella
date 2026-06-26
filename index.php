@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Барсбек & Кымбат - Свадебное приглашение</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <audio id="bg-music" src="your-music.mp3" loop></audio>
+    <div class="music-container fade-in">
+        <button id="music-toggle" class="music-btn">🎵 Play Music</button>
+    </div>
+
+    <header class="hero">
+        <p class="hero-top-text fade-in">ПРИГЛАШЕНИЕ / ЧАКЫРУУ</p>
+        <div class="hero-title-box fade-in">
+            <h1>Барсбек <br><span class="and-symbol">&</span><br> Кымбат</h1>
+        </div>
+        
+        <div class="hero-photo fade-in">
+            <img src="your-photo.jpg" alt="Барсбек & Кымбат">
+        </div>
+        
+        <p class="hero-date-footer fade-in">12.08.2026</p>
+        <div class="arrow-down">↓</div>
+    </header>
+
+    <section class="section text-section fade-in">
+        <div class="lang-block kg-lang">
+            <p class="wedding-verse">
+                Урматтуу коноктор ! <br><br>
+                Сиздерди Барсбек менен Кымбаттын үйлөнүү үлпөт тоюна чын жүрөктөн чакырабыз! <br>
+                Кубанычыбызды биз менен бөлүшүп, бул өзгөчө күндүн күбөсү болуңуздар. <br><br>
+                Сиздерди чыдамсыздык менен күтөбүз!
+            </p>
+        </div>
+        
+        <div class="line-divider"></div>
+        
+        <div class="lang-block ru-lang">
+            <p class="wedding-verse">
+                Дорогие гости! <br><br>
+                Сердечно приглашаем вас на свадебное торжество Барсбека и Кымбат! <br>
+                Будем рады разделить с вами этот счастливый и незабываемый день. <br><br>
+                С нетерпением ждем встречи с вами! 💍✨
+            </p>
+        </div>
+    </section>
+
+    <section class="section fade-in">
+        <h2 class="month-title">Август 2026</h2>
+        <div class="calendar-container">
+            <div class="calendar-grid">
+                <div class="day-name">ПН</div><div class="day-name">ВТ</div><div class="day-name">СР</div><div class="day-name">ЧТ</div><div class="day-name">ПТ</div><div class="day-name">СБ</div><div class="day-name">ВС</div>
+                
+                <div></div><div></div><div></div><div></div><div></div>
+                <div>1</div><div>2</div>
+                
+                <div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div>
+                <div>10</div><div>11</div><div class="wedding-day">12</div><div>13</div><div>14</div><div>15</div><div>16</div>
+                <div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div>
+                <div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div>
+                <div>31</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section fade-in bg-light">
+        <h2 class="section-title">До торжества осталось / Тоюбузга калды</h2>
+        <div id="countdown" class="countdown">
+            <div class="countdown-item"><div class="circle" id="days">00</div><p>Дней / Күн</p></div>
+            <div class="countdown-item"><div class="circle" id="hours">00</div><p>Часов / Саат</p></div>
+            <div class="countdown-item"><div class="circle" id="minutes">00</div><p>Минут</p></div>
+            <div class="countdown-item"><div class="circle" id="seconds">00</div><p>Секунд</p></div>
+        </div>
+    </section>
+
+    <section class="section fade-in" id="rsvp">
+        <h2 class="section-title">Подтверждение присутствия <br><span class="sub-title-kg">Катышууну ырастоо</span></h2>
+        <p class="wedding-verse" style="font-size: 1.1rem; margin-bottom: 40px;">
+            Пожалуйста, подтвердите ваше присутствие до 1 августа, нажав на кнопку ниже:
+        </p>
+        
+        <a href="https://wa.me/996700123456?text=%D0%A1%D0%B0%D0%BB%D0%B0%D0%BC%21%20%D0%9C%D1%8B%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D0%BB%D0%B8%20%D0%BF%D1%80%D0%B8%D0%B3%D0%BB%D0%B0%D1%81%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5.%20%D0%A1%20%D1%83%D0%B4%D0%BE%D0%B2%D0%BE%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%B8%D0%B5%D0%BC%20%D0%BF%D1%80%D0%B8%D0%B4%D0%B5%D0%BC%20%D0%BD%D0%B0%20%D0%B2%D0%B0%D1%88%D1%83%20%D1%81%D0%B2%D0%B0%D0%B4%D1%8C%D0%B1%D1%83%21" 
+           target="_blank" class="btn-submit whatsapp-btn">
+            🟢 ПОДТВЕРДИТЬ В WHATSAPP / ПОДТВЕРДИТЬ
+        </a>
+    </section>
+
+    <section class="section fade-in">
+        <div class="line-divider" style="margin-top: 0; margin-bottom: 30px;"></div>
+        <p class="hosts-title-kg">Тойдун ээлери:</p>
+        <p class="hosts-names">Кenенбай & Жылдыз</p>
+        <div class="line-divider" style="margin-top: 30px; margin-bottom: 0;"></div>
+    </section>
+
+    <section class="section fade-in bg-light" style="margin-bottom: 80px;">
+        <h2 class="section-title">Место проведения <br><span class="sub-title-kg">Дарегибиз</span></h2>
+        <p class="time-highlight">⏱ 15:30</p>
+        <p class="restaurant-name">Банкетный зал «ZAMAN»</p>
+        <p class="restaurant-address">г. Бишкек, ул. Линейная (Тулеева), 1а</p>
+        <div style="margin-top: 30px;">
+            <a href="https://2gis.kg/bishkek/geo/70000001046223622" target="_blank" class="btn-submit 2gis-btn">Открыть карту 2ГИС</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
