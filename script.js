@@ -25,7 +25,20 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // 2. ПЛАВНОЕ ПОЯВЛЕНИЕ ЭЛЕМЕНТОВ ПРИ СКРОЛЛЕ
+    // 2. ГЕНЕРАЦИЯ ЛЕПЕСТКОВ
+    const petalsContainer = document.getElementById("petals-container");
+    if (petalsContainer) {
+        for (let i = 0; i < 25; i++) {
+            const petal = document.createElement("div");
+            petal.classList.add("petal");
+            petal.style.left = Math.random() * 100 + "vw";
+            petal.style.animationDelay = Math.random() * 8 + "s";
+            petal.style.animationDuration = Math.random() * 6 + 6 + "s";
+            petalsContainer.appendChild(petal);
+        }
+    }
+
+    // 3. ПЛАВНОЕ ПОЯВЛЕНИЕ ЭЛЕМЕНТОВ ПРИ СКРОЛЛЕ
     const fadeElements = document.querySelectorAll(".fade-in");
 
     const observer = new IntersectionObserver(function (entries) {
@@ -40,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(element);
     });
 
-    // 3. МУЗЫКАЛЬНЫЙ ПЛЕЕР
+    // 4. МУЗЫКАЛЬНЫЙ ПЛЕЕР
     const music = document.getElementById("bg-music");
     const musicToggle = document.getElementById("music-toggle");
 
