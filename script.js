@@ -61,29 +61,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
-// 4. АНИМАЦИЯ ПАДАЮЩИХ ЛЕПЕСТКОВ
-function createPetal() {
-    const container = document.getElementById('petals-container');
-    if (!container) return;
-
-    const petal = document.createElement('div');
-    petal.classList.add('petal');
-
-    petal.style.left = Math.random() * 100 + 'vw';
-    
-    const size = Math.random() * 8 + 8 + 'px';
-    petal.style.width = size;
-    petal.style.height = size;
-
-    petal.style.animationDuration = Math.random() * 5 + 5 + 's';
-    petal.style.animationDelay = Math.random() * 5 + 's';
-
-    container.appendChild(petal);
-
-    setTimeout(() => {
-        petal.remove();
-    }, 10000);
-}
-
-setInterval(createPetal, 400);
