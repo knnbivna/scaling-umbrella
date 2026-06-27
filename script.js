@@ -1,55 +1,89 @@
-function toggleGuestCount(show) {
-    const block = document.getElementById('guest-count-block');
-    if (show) {
-        block.style.display = 'block';
-    } else {
-        block.style.display = 'none';
-        document.getElementById('guest_count').value = 0;
+document.addEventListener("DOMContentLoaded", function () {
+    // 1. ТАЙМЕР ОТСЧЕТА
+    const targetDate = new Date("August 12, 2026 15:30:00").getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const difference = targetDate - now;
+
+        if (difference < 0) {
+            document.getElementById("countdown").innerHTML = "<h3>Торжество началось! / Той башталды!</h3>";
+            return;
+        }
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+        document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+        document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+        document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
     }
-}
 
-const weddingDate = new Date("Aug 12, 2026 15:00:00").getTime();
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
 
-const timerInterval = setInterval(function() {
-    const now = new Date().getTime();
-    const distance = weddingDate - now;
+    // 2. ПЛАВНОЕ ПОЯВЛЕНИЕ ЭЛЕМЕНТОВ ПРИ СКРОЛЛЕ
+    const fadeElements = document.querySelectorAll(".fade-in");
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.1 });
 
-    document.getElementById("days").innerText = days < 10 ? "0" + days : days;
-    document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
-    document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
-    document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+    fadeElements.forEach(element => {
+        observer.observe(element);
+    });
 
-    if (distance < 0) {
-        clearInterval(timerInterval);
-        document.getElementById("countdown").innerHTML = "<h3>День свадьбы настал!</h3>";
-    }
-}, 1000);
+    // 3. МУЗЫКАЛЬНЫЙ ПЛЕЕР
+    const music = document.getElementById("bg-music");
+    const musicToggle = document.getElementById("music-toggle");
 
-const music = document.getElementById('bg-music');
-const musicBtn = document.getElementById('music-toggle');
-
-musicBtn.addEventListener('click', () => {
-    if (music.paused) {
-        music.play().catch(e => console.log("Музыка запустится после взаимодействия"));
-        musicBtn.innerText = "Пауза";
-    } else {
-        music.pause();
-        musicBtn.innerText = "Воспроизвести музыку";
+    if (musicToggle && music) {
+        musicToggle.addEventListener("click", function () {
+            if (music.paused) {
+                music.play().then(() => {
+                    musicToggle.innerText = "⏸ Pause Music";
+                    musicToggle.classList.add("playing");
+                }).catch(error => {
+                    console.log("Ошибка воспроизведения аудио:", error);
+                });
+            } else {
+                music.pause();
+                musicToggle.innerText = "🎵 Play Music";
+                musicToggle.classList.remove("playing");
+            }
+        });
     }
 });
 
-const fadeBlocks = document.querySelectorAll('.fade-in');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, { threshold: 0.1 });
+// 4. АНИМАЦИЯ ПАДАЮЩИХ ЛЕПЕСТКОВ
+function createPetal() {
+    const container = document.getElementById('petals-container');
+    if (!container) return;
 
-fadeBlocks.forEach(block => observer.observe(block));
+    const petal = document.createElement('div');
+    petal.classList.add('petal');
+
+    petal.style.left = Math.random() * 100 + 'vw';
+    
+    const size = Math.random() * 8 + 8 + 'px';
+    petal.style.width = size;
+    petal.style.height = size;
+
+    petal.style.animationDuration = Math.random() * 5 + 5 + 's';
+    petal.style.animationDelay = Math.random() * 5 + 's';
+
+    container.appendChild(petal);
+
+    setTimeout(() => {
+        petal.remove();
+    }, 10000);
+}
+
+setInterval(createPetal, 400);
