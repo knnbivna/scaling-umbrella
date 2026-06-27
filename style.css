@@ -1,13 +1,33 @@
 /* Роскошный Чёрно-Белый Минимализм */
+/* Для всего основного текста на странице */
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #FFFFFF; /* Кристально белый фон */
-    color: #111111; /* Глубокий чёрный цвет для идеальной читаемости */
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 1.2rem; /* Текст станет чуть крупнее и будет легче читаться */
+    color: #2c3e50;
     margin: 0;
     padding: 0;
     text-align: center;
-    letter-spacing: 1px;
-    overflow-x: hidden;
+    background-color: #FFFFFF;
+}
+
+/* Для главных имен "Барсбек & Кымбат" */
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic; /* Сделает имена красивым курсивом */
+    font-weight: 300;
+    letter-spacing: 2px; /* Добавит благородный простор между буквами */
+}
+
+/* Для остальных заголовков (Календарь, Таймер и т.д.) */
+h2, .month-title, .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-transform: uppercase; /* Сделает буквы заглавными и аккуратными */
+    letter-spacing: 4px;
+    color: #000000;
+    margin-bottom: 50px;
 }
 
 /* Кнопка музыки */
@@ -116,15 +136,6 @@ body {
     background-color: #111111;
     margin: 45px auto;
 }
-.section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    font-weight: 300;
-    letter-spacing: 4px;
-    color: #000000;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-}
 .sub-title-kg {
     font-size: 1.25rem;
     font-style: italic;
@@ -157,6 +168,7 @@ body {
     font-size: 0.75rem;
     font-weight: 400;
     color: #777777;
+    font-family: 'Montserrat', sans-serif;
 }
 .calendar-grid div:not(.day-name) {
     font-size: 0.95rem;
@@ -166,10 +178,11 @@ body {
     justify-content: center;
     align-items: center;
     color: #111111;
+    font-family: 'Montserrat', sans-serif;
 }
 .wedding-day {
     font-weight: 400;
-    border: 1px solid #111111; /* Строгий чёрный кружок вокруг даты вместо сердечка */
+    border: 1px solid #111111; /* Строгий чёрный кружок вокруг даты */
     border-radius: 50%;
     width: 35px;
     box-sizing: border-box;
@@ -190,6 +203,7 @@ body {
     margin-top: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
 }
 .circle {
     width: 80px;
@@ -202,6 +216,7 @@ body {
     font-weight: 200;
     background: #FFFFFF;
     color: #000000;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Локация */
@@ -223,6 +238,21 @@ body {
     font-size: 0.85rem;
     font-weight: 300;
     color: #555555;
+    font-family: 'Montserrat', sans-serif;
+}
+.hosts-title-kg {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: #555555;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+.hosts-names {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9rem;
+    font-weight: 300;
+    color: #000000;
+    margin: 0;
 }
 
 /* Строгая RSVP форма */
@@ -260,6 +290,7 @@ body {
     color: #111111;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
 }
 .radio-group {
     display: flex;
@@ -278,6 +309,7 @@ body {
     font-weight: 300;
     cursor: pointer;
     color: #111111;
+    font-family: 'Montserrat', sans-serif;
 }
 input[type="radio"] {
     appearance: none;
@@ -316,12 +348,14 @@ input[type="radio"]:checked::before {
     margin-top: 20px;
     letter-spacing: 3px;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-sizing: border-box;
+    text-decoration: none;
 }
 .btn-submit:hover {
     background: #FFFFFF;
     color: #000000;
 }
-.2gis-btn {
+.dg-btn {
     display: inline-block !important;
     width: auto !important;
     padding: 14px 45px !important;
@@ -329,7 +363,7 @@ input[type="radio"]:checked::before {
     color: #000000;
     border: 1px solid #111111;
 }
-.2gis-btn:hover {
+.dg-btn:hover {
     background: #000000;
     color: #FFFFFF;
 }
@@ -357,6 +391,7 @@ input[type="radio"]:checked::before {
     font-size: 0.9rem;
     font-weight: 300;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 .success { color: #000000; background-color: #FAFAFA; border: 1px solid #111111; }
 .whatsapp-btn {
@@ -367,7 +402,7 @@ input[type="radio"]:checked::before {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 .whatsapp-btn:hover {
-    background: #25D366; /* При наведении она станет красиво изумрудно-зеленой в стиле WhatsApp */
+    background: #25D366; /* Красивый цвет WhatsApp при наведении */
     color: #FFFFFF;
     border-color: #25D366;
 }
