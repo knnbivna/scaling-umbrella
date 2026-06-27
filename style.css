@@ -1,9 +1,9 @@
-/* Роскошный Чёрно-Белый Минимализм */
+/* Роскошный Чёрно-Белый Минимализм с нежным курсивом */
 /* Для всего основного текста на странице */
 body {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 400;
-    font-size: 1.2rem; /* Текст станет чуть крупнее и будет легче читаться */
+    font-size: 1.25rem; /* Текст стал чуть крупнее для мягкого восприятия */
     color: #2c3e50;
     margin: 0;
     padding: 0;
@@ -11,23 +11,23 @@ body {
     background-color: #FFFFFF;
 }
 
-/* Для главных имен "Барсбек & Кымбат" */
+/* Для главных имен "Барысбек & Кымбат" */
 h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic; /* Сделает имена красивым курсивом */
-    font-weight: 300;
-    letter-spacing: 2px; /* Добавит благородный простор между буквами */
+    font-family: 'Playfair Display', serif;
+    font-style: italic; /* Элегантный, благородный курсив */
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
 /* Для остальных заголовков (Календарь, Таймер и т.д.) */
 h2, .month-title, .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    font-weight: 300;
-    text-transform: uppercase; /* Сделает буквы заглавными и аккуратными */
-    letter-spacing: 4px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic; /* Делает заголовки секций более нежными */
+    font-size: 1.9rem;
+    font-weight: 400;
     color: #000000;
     margin-bottom: 50px;
+    letter-spacing: 1px;
 }
 
 /* Кнопка музыки */
@@ -64,21 +64,23 @@ h2, .month-title, .section-title {
     letter-spacing: 6px;
     color: #777777;
     margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
 }
 .hero-title-box h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3.5rem;
-    font-weight: 300;
-    line-height: 1.1;
-    letter-spacing: 1px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 3.6rem;
+    font-weight: 400;
+    line-height: 1.2;
     color: #000000;
     margin: 25px 0;
 }
 .and-symbol {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     font-style: italic;
-    font-weight: 300;
+    font-weight: 400;
     color: #111111;
+    font-family: 'Playfair Display', serif;
 }
 .hero-photo {
     margin: 40px auto;
@@ -91,7 +93,7 @@ h2, .month-title, .section-title {
 .hero-photo img {
     width: 100%;
     display: block;
-    filter: grayscale(20%); /* Легкий стильный фильтр для гармонии */
+    filter: grayscale(15%); /* Мягкий фильтр */
     transition: all 0.6s ease;
 }
 .hero-photo:hover img {
@@ -99,10 +101,10 @@ h2, .month-title, .section-title {
     transform: scale(1.02);
 }
 .hero-date-footer {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.2rem;
-    font-weight: 300;
-    letter-spacing: 6px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 2.4rem;
+    font-weight: 400;
     margin-top: 30px;
     color: #000000;
 }
@@ -120,13 +122,13 @@ h2, .month-title, .section-title {
     margin: 0 auto;
 }
 .bg-light {
-    background-color: #FAFAFA; /* Едва заметный серый оттенок для разделения блоков */
+    background-color: #FAFAFA; /* Легкий контрастный фон для блоков */
     max-width: 100% !important;
 }
 .wedding-verse {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.45rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.8;
     color: #111111;
 }
@@ -137,23 +139,23 @@ h2, .month-title, .section-title {
     margin: 45px auto;
 }
 .sub-title-kg {
-    font-size: 1.25rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
     font-style: italic;
     text-transform: none;
     color: #555555;
     display: block;
     margin-top: 8px;
-    letter-spacing: 1px;
+    letter-spacing: 0;
 }
 
 /* Календарь */
 .month-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
     font-size: 2.4rem;
-    font-weight: 300;
-    letter-spacing: 3px;
+    font-weight: 400;
     margin-bottom: 35px;
-    text-transform: uppercase;
 }
 .calendar-container {
     max-width: 300px;
@@ -182,7 +184,7 @@ h2, .month-title, .section-title {
 }
 .wedding-day {
     font-weight: 400;
-    border: 1px solid #111111; /* Строгий чёрный кружок вокруг даты */
+    border: 1px solid #111111;
     border-radius: 50%;
     width: 35px;
     box-sizing: border-box;
@@ -221,9 +223,10 @@ h2, .month-title, .section-title {
 
 /* Локация */
 .time-highlight {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
     font-size: 2.8rem;
-    font-weight: 300;
+    font-weight: 400;
     margin: 15px 0;
     color: #000000;
 }
@@ -248,92 +251,15 @@ h2, .month-title, .section-title {
     margin-bottom: 5px;
 }
 .hosts-names {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
     font-size: 1.9rem;
-    font-weight: 300;
+    font-weight: 400;
     color: #000000;
     margin: 0;
 }
 
-/* Строгая RSVP форма */
-.rsvp-form {
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: left;
-}
-.form-group {
-    margin-bottom: 40px;
-}
-.form-group input[type="text"],
-.form-group input[type="number"],
-.form-group textarea {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #CCCCCC;
-    padding: 12px 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 300;
-    outline: none;
-    background: transparent;
-    color: #000000;
-    transition: border-color 0.4s;
-}
-.form-group input:focus, .form-group textarea:focus {
-    border-bottom-color: #000000;
-}
-.group-title {
-    display: block;
-    font-size: 0.85rem;
-    font-weight: 400;
-    margin-bottom: 18px;
-    color: #111111;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: 'Montserrat', sans-serif;
-}
-.radio-group {
-    display: flex;
-    gap: 35px;
-}
-.radio-group-vertical {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-.radio-group label, .radio-group-vertical label {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 0.9rem;
-    font-weight: 300;
-    cursor: pointer;
-    color: #111111;
-    font-family: 'Montserrat', sans-serif;
-}
-input[type="radio"] {
-    appearance: none;
-    width: 16px;
-    height: 16px;
-    border: 1px solid #111111;
-    border-radius: 50%;
-    outline: none;
-    position: relative;
-    cursor: pointer;
-    background: #FFFFFF;
-}
-input[type="radio"]:checked::before {
-    content: '';
-    width: 8px;
-    height: 8px;
-    background-color: #000000;
-    border-radius: 50%;
-    position: absolute;
-    top: 3px;
-    left: 3px;
-}
-
-/* Высококлассные Кнопки */
+/* Кнопки */
 .btn-submit {
     display: block;
     width: 100%;
@@ -368,7 +294,7 @@ input[type="radio"]:checked::before {
     color: #FFFFFF;
 }
 
-/* Плавные Премиум Анимации скролла */
+/* Анимации скролла */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -385,15 +311,6 @@ input[type="radio"]:checked::before {
     60% { transform: translateY(-3px); }
 }
 
-.alert {
-    padding: 15px;
-    margin-bottom: 30px;
-    font-size: 0.9rem;
-    font-weight: 300;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-}
-.success { color: #000000; background-color: #FAFAFA; border: 1px solid #111111; }
 .whatsapp-btn {
     background: #000000;
     color: #FFFFFF;
@@ -402,7 +319,7 @@ input[type="radio"]:checked::before {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 .whatsapp-btn:hover {
-    background: #25D366; /* Красивый цвет WhatsApp при наведении */
+    background: #25D366;
     color: #FFFFFF;
     border-color: #25D366;
 }
