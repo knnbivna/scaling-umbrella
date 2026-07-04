@@ -1,31 +1,93 @@
+/* Роскошный Чёрно-Белый Минимализм */
 body {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    font-size: 1.25rem;
-    color: #2c3e50;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFFFFF;
+    color: #0d1b2a; /* Единый глубокий синий для всего обычного текста */
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #FFFFFF;
+    letter-spacing: 1px;
+    overflow-x: hidden;
+}
 }
 
+/* Главные имена на сайте и в конверте */
+/* РОСКОШНЫЙ ШРИФТ С ЗАВИТКАМИ ДЛЯ ИМЕН */
 h1 {
+    font-family: 'Great Vibes', cursive !important; /* Включаем каллиграфию как на картинке */
+    font-size: 4rem; /* Делаем имена крупными и заметными */
+    font-weight: 400;
+    font-style: normal; /* Для этого шрифта наклон уже встроен */
+    letter-spacing: 0px; /* Завиткам не нужен лишний разбег */
+    color: #1d3557;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* Применим этот же стиль к именам на самом конверте */
+.envelope-names {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 2.2rem !important;
+    color: #1d3557;
+    margin: 0 0 5px 0;
+}
+
+/* Делаем имена в конверте чуть аккуратнее под размер письма */
+.envelope-names {
+    font-size: 2.2rem;
+}
+
+/* Символ & между именами делаем нежным и тонким */
+.and-symbol {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-weight: 400;
-    letter-spacing: 1px;
+    font-size: 2rem;
+    color: #457b9d;
+    display: block;
+    margin: 5px 0;
+
+    /* ИСПРАВЛЕНИЕ ОГРОМНОГО ПРОБЕЛА ОКОЛО АМПЕРСАНДА */
+.and-symbol {
+    display: inline-block;
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 3rem; /* Чуть уменьшаем, чтобы он смотрелся аккуратно */
+    color: #457b9d;  /* Наш благородный акцентный синий */
+    
+    /* Сдвигаем имена внутрь, убирая гигантские пустоты по бокам */
+    margin: 0 -15px; 
+    
+    vertical-align: middle; /* Выравниваем ровно по центру высоты букв */
+}
 }
 
+/* Остальные заголовки разделов (Календарь, Место проведения и т.д.) */
 h2, .month-title, .section-title {
     font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 2.1rem; /* Сделали заголовки чуть крупнее и элегантнее */
     font-weight: 400;
-    color: #000000;
-    margin-bottom: 50px;
-    letter-spacing: 1px;
+    font-style: italic; /* Строгий, но красивый журнальный курсив */
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: #1d3557;
 }
 
+/* Делаем амперсанд (&) между именами особенно нежным */
+.and-symbol {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 2.5rem;
+    color: #457b9d; /* Нежно-голубой акцент */
+}
+
+/* Красивый журнальный стиль для стихов и пригласительного текста */
+.wedding-verse {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-style: italic; /* Нежный курсив для текстов на кыргызском и русском */
+    line-height: 1.8;
+    color: #333333; /* Мягкий графитовый для удобного чтения */
+}
+
+/* Кнопка музыки */
 .music-container {
     padding: 40px 0 10px 0;
 }
@@ -47,6 +109,7 @@ h2, .month-title, .section-title {
     color: #FFFFFF;
 }
 
+/* Главный экран */
 .hero {
     max-width: 550px;
     margin: 0 auto;
@@ -58,36 +121,34 @@ h2, .month-title, .section-title {
     letter-spacing: 6px;
     color: #777777;
     margin-bottom: 30px;
-    font-family: 'Montserrat', sans-serif;
 }
 .hero-title-box h1 {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 3.6rem;
-    font-weight: 400;
-    line-height: 1.2;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: 1px;
     color: #000000;
     margin: 25px 0;
 }
 .and-symbol {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     font-style: italic;
-    font-weight: 400;
+    font-weight: 300;
     color: #111111;
-    font-family: 'Playfair Display', serif;
 }
 .hero-photo {
     margin: 40px auto;
     width: 85%;
     max-width: 380px;
-    border: 1px solid #111111;
+    border: 1px solid #111111; /* Тонкая чёрная рамка вокруг фото */
     padding: 8px;
     background: #FFFFFF;
 }
 .hero-photo img {
     width: 100%;
     display: block;
-    filter: grayscale(15%);
+    filter: grayscale(20%); /* Легкий стильный фильтр для гармонии */
     transition: all 0.6s ease;
 }
 .hero-photo:hover img {
@@ -95,10 +156,10 @@ h2, .month-title, .section-title {
     transform: scale(1.02);
 }
 .hero-date-footer {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 2.4rem;
-    font-weight: 400;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 6px;
     margin-top: 30px;
     color: #000000;
 }
@@ -109,20 +170,20 @@ h2, .month-title, .section-title {
     animation: bounce 2s infinite;
 }
 
+/* Секции */
 .section {
     padding: 80px 24px;
     max-width: 480px;
     margin: 0 auto;
 }
 .bg-light {
-    background-color: #FAFAFA;
+    background-color: #FAFAFA; /* Едва заметный серый оттенок для разделения блоков */
     max-width: 100% !important;
 }
 .wedding-verse {
     font-family: 'Cormorant Garamond', serif;
-    font-style: italic; /* Включили нежный курсив для стихов */
-    font-size: 1.5rem;   /* Чуть увеличили для читаемости курсива */
-    font-weight: 400;
+    font-size: 1.45rem;
+    font-weight: 300;
     line-height: 1.8;
     color: #111111;
 }
@@ -132,17 +193,34 @@ h2, .month-title, .section-title {
     background-color: #111111;
     margin: 45px auto;
 }
-.sub-title-kg {
+.section-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: #000000;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.sub-title-kg {
+    font-size: 1.25rem;
     font-style: italic;
     text-transform: none;
     color: #555555;
     display: block;
     margin-top: 8px;
-    letter-spacing: 0;
+    letter-spacing: 1px;
 }
 
+/* Календарь */
+.month-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
 .calendar-container {
     max-width: 300px;
     margin: 0 auto;
@@ -156,7 +234,6 @@ h2, .month-title, .section-title {
     font-size: 0.75rem;
     font-weight: 400;
     color: #777777;
-    font-family: 'Montserrat', sans-serif;
 }
 .calendar-grid div:not(.day-name) {
     font-size: 0.95rem;
@@ -166,11 +243,10 @@ h2, .month-title, .section-title {
     justify-content: center;
     align-items: center;
     color: #111111;
-    font-family: 'Montserrat', sans-serif;
 }
 .wedding-day {
     font-weight: 400;
-    border: 1px solid #111111;
+    border: 1px solid #111111; /* Строгий чёрный кружок вокруг даты вместо сердечка */
     border-radius: 50%;
     width: 35px;
     box-sizing: border-box;
@@ -178,6 +254,7 @@ h2, .month-title, .section-title {
     color: #FFFFFF !important;
 }
 
+/* Минималистичный Таймер */
 .countdown {
     display: flex;
     justify-content: center;
@@ -190,7 +267,6 @@ h2, .month-title, .section-title {
     margin-top: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-family: 'Montserrat', sans-serif;
 }
 .circle {
     width: 80px;
@@ -203,21 +279,19 @@ h2, .month-title, .section-title {
     font-weight: 200;
     background: #FFFFFF;
     color: #000000;
-    font-family: 'Montserrat', sans-serif;
 }
 
+/* Локация */
 .time-highlight {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 2.8rem;
-    font-weight: 400;
+    font-weight: 300;
     margin: 15px 0;
     color: #000000;
 }
 .restaurant-name {
     font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     font-weight: 400;
     margin-bottom: 8px;
     letter-spacing: 1px;
@@ -226,24 +300,85 @@ h2, .month-title, .section-title {
     font-size: 0.85rem;
     font-weight: 300;
     color: #555555;
-    font-family: 'Montserrat', sans-serif;
-}
-.hosts-title-kg {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    color: #555555;
-    font-size: 1.3rem;
-    margin-bottom: 5px;
-}
-.hosts-names {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 1.9rem;
-    font-weight: 400;
-    color: #000000;
-    margin: 0;
 }
 
+/* Строгая RSVP форма */
+.rsvp-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+.form-group {
+    margin-bottom: 40px;
+}
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 12px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    outline: none;
+    background: transparent;
+    color: #000000;
+    transition: border-color 0.4s;
+}
+.form-group input:focus, .form-group textarea:focus {
+    border-bottom-color: #000000;
+}
+.group-title {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-bottom: 18px;
+    color: #111111;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.radio-group {
+    display: flex;
+    gap: 35px;
+}
+.radio-group-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.radio-group label, .radio-group-vertical label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    cursor: pointer;
+    color: #111111;
+}
+input[type="radio"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #111111;
+    border-radius: 50%;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    background: #FFFFFF;
+}
+input[type="radio"]:checked::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+/* Высококлассные Кнопки */
 .btn-submit {
     display: block;
     width: 100%;
@@ -258,14 +393,12 @@ h2, .month-title, .section-title {
     margin-top: 20px;
     letter-spacing: 3px;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-sizing: border-box;
-    text-decoration: none;
 }
 .btn-submit:hover {
     background: #FFFFFF;
     color: #000000;
 }
-.dg-btn {
+.2gis-btn {
     display: inline-block !important;
     width: auto !important;
     padding: 14px 45px !important;
@@ -273,11 +406,12 @@ h2, .month-title, .section-title {
     color: #000000;
     border: 1px solid #111111;
 }
-.dg-btn:hover {
+.2gis-btn:hover {
     background: #000000;
     color: #FFFFFF;
 }
 
+/* Плавные Премиум Анимации скролла */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -294,66 +428,361 @@ h2, .month-title, .section-title {
     60% { transform: translateY(-3px); }
 }
 
-.whatsapp-btn {
-    background: #000000;
-    color: #FFFFFF;
-    text-decoration: none;
-    font-weight: 500;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+.alert {
+    padding: 15px;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    text-align: center;
 }
-.whatsapp-btn:hover {
-    background: #25D366;
-    color: #FFFFFF;
-    border-color: #25D366;
+.success { color: #000000; background-color: #FAFAFA; border: 1px solid #111111; }
+/* СТИЛИ ДЛЯ АНИМАЦИИ КОНВЕРТА */
+#envelope-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f1ea; /* Нежный кремовый фон под стать узорам */
+    z-index: 100000; /* Перекрывает абсолютно всё при входе */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease, visibility 1s ease;
 }
 
-/* КРАСИВЫЕ НЕЖНЫЕ ЛЕПЕСТКИ */
-#petals-container {
+.envelope-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.envelope {
+    position: relative;
+    width: 280px;
+    height: 180px;
+    background-color: #1d3557; /* Благородный тёмно-синий цвет конверта */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Крышка конверта */
+.flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-top: 100px solid #1d3557;
+    transform-origin: top;
+    transition: transform 0.6s ease;
+    z-index: 3;
+}
+
+/* Карман конверта */
+.pocket {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-left: 140px solid #2a4773;
+    border-right: 140px solid #2a4773;
+    border-bottom: 90px solid #2a4773;
+    border-top: 90px solid transparent;
+    z-index: 2;
+}
+
+/* Письмо внутри */
+.letter {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    width: 250px;
+    height: 160px;
+    background: #ffffff;
+    border: 1px dashed #1d3557;
+    z-index: 1;
+    transition: transform 0.8s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.letter-preview {
+    text-align: center;
+    padding: 10px;
+}
+
+.envelope-names {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #1d3557;
+    margin: 0 0 5px 0;
+}
+
+.envelope-date {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: #777777;
+    margin: 0;
+}
+
+/* Стильная кнопка открытия */
+#open-envelope-btn {
+    background: transparent;
+    color: #1d3557;
+    border: 1px solid #1d3557;
+    padding: 12px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#open-envelope-btn:hover {
+    background: #1d3557;
+    color: #ffffff;
+}
+
+/* КЛАССЫ АНИМАЦИИ ПРИ КЛИКЕ */
+.envelope.open .flap {
+    transform: rotateX(180deg);
+    z-index: 0; /* Крышка уходит назад */
+}
+
+.envelope.open .letter {
+    transform: translateY(-80px);
+    z-index: 4; /* Письмо выезжает наверх */
+}
+
+#envelope-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+/* КОНТЕЙНЕР ДЛЯ ПАРЯЩИХ ЛЕПЕСТКОВ / БАБОЧЕК */
+#leaves-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Чтобы элементы не мешали кликать по кнопкам */
+    z-index: 999; /* Выше фона, но ниже конверта при входе */
+    overflow: hidden;
+}
+
+/* УЛУЧШЕННЫЕ ОБЪЁМНЫЕ ЛЕПЕСТКИ */
+#leaves-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 999;
     overflow: hidden;
 }
 
-.petal {
+.leaf {
     position: absolute;
-    background: linear-gradient(135deg, #ffccd5, #fff0f3);
-    border-radius: 15% 70% 15% 70%;
-    opacity: 0.7;
-    max-height: 14px;
-    max-width: 14px;
-    animation: fall linear infinite;
+    display: block;
+    pointer-events: none;
+    /* Увеличиваем непрозрачность, чтобы они стали яркими и сочными */
+    opacity: 0.85; 
+    /* Добавляем мягкую тень для объёма, будто они парят над сайтом */
+    filter: drop-shadow(0 4px 8px rgba(29, 53, 87, 0.25));
+    /* Запускаем одновременно падение и покачивание */
+    animation: fall linear infinite, sway ease-in-out infinite alternate;
 }
 
-.petal:nth-child(2n) {
-    background: #ffe5ec;
-    border-radius: 50% 50% 0 50%;
-}
-
-.petal:nth-child(3n) {
-    background: #fff0f3;
-    border-radius: 70% 15% 70% 15%;
-}
-
+/* Красивое плавное падение сверху вниз */
 @keyframes fall {
     0% {
-        top: -20px;
-        transform: translateX(0) rotate(0deg);
-        opacity: 0;
-    }
-    10% {
-        opacity: 0.7;
-    }
-    90% {
-        opacity: 0.7;
+        top: -10%;
     }
     100% {
-        top: 105vh;
-        transform: translateX(100px) rotate(360deg);
-        opacity: 0;
+        top: 110%;
     }
+}
+
+/* Реалистичное покачивание влево-вправо и вращение в 3D */
+@keyframes sway {
+    0% {
+        transform: translateX(0) rotate(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: translateX(50px) rotate(45deg) rotateY(180deg);
+    }
+}
+/* СТИЛЬ ДЛЯ БОЛЬШИХ БУКВ (МОНОГРАММА) */
+.monogram-container {
+    padding: 60px 20px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.monogram-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Расстояние между буквами и линией */
+}
+
+.monogram-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 5.5rem; /* Огромный журнальный размер */
+    font-weight: 300;
+    color: #0d1b2a; /* Наш фирменный глубокий тон */
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+/* Тонкая вертикальная линия, как на референсе */
+.monogram-divider {
+    width: 1px;
+    height: 90px;
+    background: linear-gradient(to bottom, transparent, #415a77, transparent);
+}
+
+/* Маленький аккуратный текст под монограммой */
+.monogram-subtext {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 5px; /* Красивый широкий разбег букв */
+    color: #778da9;
+    margin-top: 15px;
+}
+/* ЕДИНЫЙ СТИЛЬ ЗАГОЛОВКОВ */
+h1, h2, h3, .section-title {
+    font-family: 'Playfair Display', serif;
+    color: #0d1b2a;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* Каллиграфический шрифт для имён (Great Vibes, который мы настроили) */
+.wedding-names-calligraphy {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 3.5rem;
+    color: #415a77; /* Спокойный, дорогой сине-стальной оттенок */
+    margin: 10px 0;
+}
+
+/* КНОПКИ И ПОЛЯ ВВОДЫ В ОДНОМ ТОНЕ */
+.btn-submit {
+    background-color: #0d1b2a; /* Никакого чёрного, только глубокий синий */
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 2px; /* Чуть острые, стильные углы */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #415a77; /* Плавная смена цвета при наведении */
+    box-shadow: 0 4px 15px rgba(13, 27, 42, 0.2);
+}
+
+/* Поля формы */
+input[type="text"], textarea, select {
+    border: 1px solid #778da9 !important; /* Тонкая аккуратная рамка */
+    color: #0d1b2a;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+input[type="text"]:focus, textarea:focus {
+    outline: none;
+    border-color: #0d1b2a !important; /* Фокус в цвет темы */
+}
+/* КРАСИВЫЙ БЛОК ДЛЯ ИМЕН */
+.wedding-names-block {
+    display: flex;
+    flex-direction: column; /* Выстраиваем в столбик, как на твоем скрине */
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+/* Благородный курсив с засечками для самих имён */
+.name-accent {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem; /* Крупный, заметный размер */
+    font-style: italic; /* Тот самый нежный журнальный курсив */
+    font-weight: 400;
+    color: #0d1b2a; /* Наш фирменный глубокий синий */
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+
+/* Изящный каллиграфический амперсанд между ними */
+.and-symbol {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 3.2rem;
+    color: #415a77; /* Спокойный стальной оттенок */
+    margin: 10px 0; /* Делаем аккуратные отступы сверху и снизу */
+    opacity: 0.8;
+}
+/* КРАСИВЫЙ БЛОК ДЛЯ ХОЗЯЕВ ТОЯ */
+.hosts-section {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.hosts-card {
+    border: 1px solid var(--soft-blue); /* Тонкая рамка в цвет темы */
+    padding: 30px 40px;
+    border-radius: 2px;
+    max-width: 400px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Легкий благородный фон */
+    box-shadow: 0 4px 20px rgba(119, 141, 169, 0.05); /* Едва заметная нежная тень */
+}
+
+.hosts-title-kg {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--steel-blue);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.hosts-names-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap; /* Чтобы красиво смотрелось на маленьких экранах */
+}
+
+.host-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem; /* Чуть меньше, чем у молодых, соблюдая иерархию */
+    font-style: italic; /* Тот самый дорогой курсив */
+    font-weight: 400;
+    color: var(--deep-navy);
+}
+
+.host-and {
+    font-family: 'Great Vibes', cursive !important;
+    font-size: 2rem;
+    color: var(--steel-blue);
+    opacity: 0.8;
 }
